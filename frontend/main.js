@@ -1,6 +1,7 @@
 fetch('http://127.0.0.1:8000/api/blog/')
     .then(res => res.json())
     .then(data => {
+        console.log(data);
         data.filter(blog => !blog.is_deleted).map(blog => createCard(blog))
     });
 
